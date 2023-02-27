@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { wrapperEnv } from '#/build/utils/env'
 import { setupVitePlugins } from '#/build/vitePlugins'
 import { resolve } from 'path'
@@ -35,5 +36,15 @@ export default defineConfig(({ command, mode }) => {
       assetsInlineLimit: 2048
     },
     plugins: setupVitePlugins(viteEnv, isBuild),
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      coverage: {
+        provider: 'c8'
+      },
+      transformMode: {
+        web: [/.[tj]sx$/]
+      }
+    }
   }
 })
