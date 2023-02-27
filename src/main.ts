@@ -1,8 +1,11 @@
+import { setupRouter } from '@/router'
 import { createApp } from 'vue'
 import App from './App.vue'
 
 function bootstrap() {
   const app = createApp(App)
+
+  setupRouter(app)
 
   app.mount('#app')
 }
