@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.4.4
   '@commitlint/config-conventional': ^17.4.4
+  '@types/lodash-es': ^4.17.6
   '@types/node': ^18.14.2
   '@typescript-eslint/eslint-plugin': ^5.53.0
   '@typescript-eslint/parser': ^5.53.0
@@ -23,6 +24,7 @@ specifiers:
   husky: ^8.0.3
   jsdom: ^21.1.0
   lint-staged: ^13.1.2
+  lodash-es: ^4.17.21
   mockjs: ^1.1.0
   naive-ui: ^2.34.3
   pinia: ^2.0.32
@@ -52,6 +54,7 @@ specifiers:
   vue-tsc: ^1.0.24
 
 dependencies:
+  lodash-es: 4.17.21
   pinia: 2.0.32_hmuptsblhheur2tugfgucj7gc4
   vue: 3.2.47
   vue-i18n: 9.2.2_vue@3.2.47
@@ -60,6 +63,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
+  '@types/lodash-es': 4.17.6
   '@types/node': 18.14.2
   '@typescript-eslint/eslint-plugin': 5.53.0_cjo54hduev4bqhpjw5znwiokqu
   '@typescript-eslint/parser': 5.53.0_ycpbpc6yetojsgtrx3mwntkhsu
@@ -3623,7 +3627,6 @@ packages:
 
   /lodash-es/4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: true
 
   /lodash.camelcase/4.3.0:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}

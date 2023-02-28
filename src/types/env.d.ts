@@ -5,6 +5,7 @@ interface ImportMetaEnv {
   readonly VITE_PUBLIC_PATH: string
   readonly VITE_PROXY: string[string[]]
   readonly VITE_MOCK: boolean
+  readonly APP_SHORT_NAME: string
 }
 
 interface ImportMeta {
