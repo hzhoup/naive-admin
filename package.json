@@ -10,20 +10,14 @@
     "test": "vitest run",
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",
-    "format": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
-    "lint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
+    "format": "prettier --write  \"{src,mock,build}/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
+    "lint": "eslint --cache --max-warnings 0  \"{src,mock,build}/**/*.{vue,ts,tsx}\" --fix",
     "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
       "eslint --fix"
-    ],
-    "package.json,*.md": [
-      "prettier --write"
-    ],
-    "{!(package)*.json": [
-      "prettier --write--parser json"
     ],
     "*.vue": [
       "prettier --write",
