@@ -31,6 +31,13 @@ export default defineConfig(({ command, mode }) => {
       port: VITE_PORT,
       proxy: createProxy(VITE_PROXY)
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "./src/assets/style/main.scss";'
+        }
+      }
+    },
     esbuild: {
       pure: isBuild ? ['console.log', 'debugger'] : []
     },
