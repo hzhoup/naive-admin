@@ -3,6 +3,8 @@ import type { ComponentPublicInstance, FunctionalComponent } from 'vue'
 
 interface ImportMetaEnv {
   readonly VITE_PUBLIC_PATH: string
+  readonly VITE_PROXY: string[string[]]
+  readonly VITE_MOCK: boolean
 }
 
 interface ImportMeta {
