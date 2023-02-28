@@ -1,8 +1,9 @@
 /// <reference types="vitest" />
-import { wrapperEnv } from '#/build/utils/env'
-import { setupVitePlugins } from '#/build/vitePlugins'
+
 import { resolve } from 'path'
 import { defineConfig, loadEnv } from 'vite'
+import { wrapperEnv } from './build/utils/env'
+import { setupVitePlugins } from './build/vitePlugins'
 
 const resolvePath = (...paths: string[]) => resolve(__dirname, ...paths)
 
@@ -20,7 +21,6 @@ export default defineConfig(({ command, mode }) => {
     base: VITE_PUBLIC_PATH,
     resolve: {
       alias: {
-        '#': resolvePath(),
         '@': resolvePath('src')
       }
     },
