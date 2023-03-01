@@ -1,3 +1,3 @@
 <template>
-  <div>{{ $t('title') }}</div>
+  <div>{{ $t('sys.app.title') }}</div>
 </template>

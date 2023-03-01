@@ -2,7 +2,7 @@ import { useLocalStoreWithOut } from '@/store/modules/locale'
 import { App } from 'vue'
 import { createI18n, I18nOptions } from 'vue-i18n'
 
-let i18n: ReturnType<typeof createI18n>
+export let i18n: ReturnType<typeof createI18n>
 
 async function createI18nOptions(): Promise<I18nOptions> {
   const localeStore = useLocalStoreWithOut()

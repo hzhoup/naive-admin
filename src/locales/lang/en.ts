@@ -1,9 +1,11 @@
+import { genMessage } from '@/locales/helpers'
 import { dateEnUS, enUS } from 'naive-ui'
 
+const modules = import.meta.glob('./en/**/*.ts')
 export default {
   message: {
-    title: 'Naive Admin'
-  },
-  naiveLocale: enUS,
-  naiveDateLocale: dateEnUS
+    ...(await genMessage(modules, 'en')),
+    naiveLocale: enUS,
+    naiveDateLocale: dateEnUS
+  }
 }
