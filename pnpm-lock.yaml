@@ -15,6 +15,7 @@ specifiers:
   '@vitest/coverage-c8': ^0.29.1
   '@vitest/ui': ^0.29.1
   '@vue/test-utils': ^2.3.0
+  colord: ^2.9.3
   commitizen: ^4.3.0
   cz-conventional-changelog: ^3.3.0
   eslint: ^8.35.0
@@ -54,6 +55,7 @@ specifiers:
   vue-tsc: ^1.0.24
 
 dependencies:
+  colord: 2.9.3
   lodash-es: 4.17.21
   pinia: 2.0.32_hmuptsblhheur2tugfgucj7gc4
   vue: 3.2.47
@@ -1996,7 +1998,6 @@ packages:
 
   /colord/2.9.3:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
-    dev: true
 
   /colorette/2.0.19:
     resolution: {integrity: sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==}

@@ -31,6 +31,7 @@
     ]
   },
   "dependencies": {
+    "colord": "^2.9.3",
     "lodash-es": "^4.17.21",
     "pinia": "^2.0.32",
     "vue": "^3.2.45",
