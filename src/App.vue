@@ -16,8 +16,11 @@
 import NaiveProvider from '@/components/common/NaiveProvider.vue'
 import { useLocale } from '@/locales/useLocale'
 import { useThemeStore } from '@/store/modules/theme'
+import { subscribeStore } from '@/store/subscribe'
 import { NConfigProvider } from 'naive-ui'
 
 const { getNaiveLocale, getNaiveDateLocale } = useLocale()
 const theme = useThemeStore()
+
+subscribeStore()
 </script>

@@ -10,7 +10,7 @@ import { computed, reactive, toRefs } from 'vue'
 const ls = createLocalStorage()
 
 export const useThemeStore = defineStore('theme-store', () => {
-  const state = reactive(initThemeSettings())
+  const state = reactive<typeof themeSetting>(initThemeSettings())
 
   const naiveTheme = computed(() => {
     return state.darkMode ? darkTheme : undefined
@@ -20,7 +20,12 @@ export const useThemeStore = defineStore('theme-store', () => {
     return getNaiveThemeOverrides({ primary: state.themeColor, ...state.otherColor })
   })
 
-  return { ...toRefs(state), naiveTheme, naiveThemeOverrides }
+  function setDarkMode(darkMode: boolean) {
+    state.darkMode = darkMode
+    ls.set('DARK_MODE', darkMode)
+  }
+
+  return { ...toRefs(state), naiveTheme, naiveThemeOverrides, setDarkMode }
 })
 
 export function initThemeSettings() {
