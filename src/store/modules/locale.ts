@@ -8,9 +8,9 @@ const ls = createLocalStorage()
 const lsSetting = ls.get('LOCALE') || localeSetting
 
 export const useLocalStore = defineStore('local-store', () => {
-  const state = reactive(lsSetting)
+  const state = reactive<typeof localeSetting>(lsSetting)
 
-  return { ...toRefs(state) }
+  return { ...toRefs(state), state }
 })
 
 export function useLocalStoreWithOut() {
