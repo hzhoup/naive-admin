@@ -1,7 +1,7 @@
 import pkg from '../../../package.json'
 
 export function getStoragePrefix() {
-  return `${import.meta.env.APP_SHORT_NAME}__${getEnv()}__${pkg.version}__`.toUpperCase()
+  return `__${import.meta.env.APP_SHORT_NAME}__${getEnv()}__${pkg.version}__`.toUpperCase()
 }
 
 export function getEnv(): string {

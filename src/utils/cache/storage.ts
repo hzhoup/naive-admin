@@ -26,7 +26,10 @@ export const createStore = ({ prefixKey = '', storage = sessionStorage, timeout 
       try {
         const data = JSON.parse(val)
         const { value, expire } = data
-        if (isNil(expire) || expire >= new Date().getTime()) return value
+        if (isNil(expire) || expire >= new Date().getTime()) {
+          this.set(key, value)
+          return value
+        }
         this.remove(key)
       } catch (e) {
         return initValue
