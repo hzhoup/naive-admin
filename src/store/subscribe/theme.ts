@@ -57,11 +57,14 @@ export function subscribeTheme() {
 /** css 暗黑模式 */
 function handleCssDarkMode() {
   const DARK_CLASS = 'dark'
+  const LIGHT_CLASS = 'light'
   function addDarkClass() {
+    document.documentElement.classList.remove(LIGHT_CLASS)
     document.documentElement.classList.add(DARK_CLASS)
   }
   function removeDarkClass() {
     document.documentElement.classList.remove(DARK_CLASS)
+    document.documentElement.classList.add(LIGHT_CLASS)
   }
   return {
     addDarkClass,

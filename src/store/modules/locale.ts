@@ -1,4 +1,4 @@
-import { localeSetting } from '@/setting/locale'
+import { localeSetting, LocaleType } from '@/setting/locale'
 import { pinia } from '@/store'
 import { createLocalStorage } from '@/utils/cache'
 import { defineStore } from 'pinia'
@@ -10,7 +10,12 @@ const lsSetting = ls.get('LOCALE') || localeSetting
 export const useLocalStore = defineStore('local-store', () => {
   const state = reactive<typeof localeSetting>(lsSetting)
 
-  return { ...toRefs(state), state }
+  function setLocaleInfo(locale: LocaleType) {
+    state.locale = locale
+    ls.set('LOCALE', state)
+  }
+
+  return { ...toRefs(state), state, setLocaleInfo }
 })
 
 export function useLocalStoreWithOut() {

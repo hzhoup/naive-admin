@@ -12,16 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  NDialogProvider,
-  NLoadingBarProvider,
-  NMessageProvider,
-  NNotificationProvider,
-  useDialog,
-  useLoadingBar,
-  useMessage,
-  useNotification
-} from 'naive-ui'
+import { useDialog, useLoadingBar, useMessage, useNotification } from 'naive-ui'
 import { defineComponent, h } from 'vue'
 
 function registerNaiveTools() {

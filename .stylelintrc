@@ -32,6 +32,7 @@
     "**/*.yaml"
   ],
   "rules": {
+    "import-notation": "string",
     "no-descending-specificity": null,
     "selector-pseudo-element-no-unknown": [
       true,

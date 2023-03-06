@@ -1,4 +1,7 @@
+import { LocaleType } from '@/setting/locale'
 import { set } from 'lodash-es'
+
+export const loadLocales: LocaleType[] = []
 
 export async function genMessage(langs: any, prefix = 'lang') {
   const result: Recordable = {}
